@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xrml="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <assemblyIdentity name="EQSM.application" version="1.0.0.1" publicKeyToken="519ee052a6877757" language="en-US" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:publisher="norova" asmv2:product="EverQuest Settings Manager" asmv2:supportUrl="http://p99.yourfirefly.com/eqsm.php" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <deployment install="true" mapFileExtensions="true" co.v1:createDesktopShortcut="true">
+    <subscription>
+      <update>
+        <beforeApplicationStartup />
+      </update>
+    </subscription>
+    <deploymentProvider codebase="http://cdn.yourfirefly.com/eqsm/EQSM.application" />
+  </deployment>
+  <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
+    <framework targetVersion="4.0" profile="Client" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
+  </compatibleFrameworks>
+  <dependency>
+    <dependentAssembly dependencyType="install" codebase="Application Files\EQSM_1_0_0_1\EQSM.exe.manifest" size="12637">
+      <assemblyIdentity name="EQSM.exe" version="1.0.0.1" publicKeyToken="519ee052a6877757" language="en-US" processorArchitecture="msil" type="win32" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>QUgUl5Uc1nRyWp96Z3ayX7+opxY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=RCAIND01\Ryan" issuerKeyHash="f5dada9352c11b611309c8a46c38308ba55d2b0b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>GXarZy3DY4haZqLZB3klnD/vCrs=</DigestValue></Reference></SignedInfo><SignatureValue>hgdHtUYx4lLMRg9K3pZwDx/Mn2DoTvtWJZ/j7kXhZN943JOqQ5OJC+h/xJUtLvkiHb1W3IijAxxZ52hb47n7Q0ylw7ZtukcduMnz3d7tHsIyUxBsY3AHFfeLuDVWGncwIfbFK1n2mc7Yve3192wjjht6oYKM4oQ8z4h94ZYzCo4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>6EsxHUW/JMgy47Q7GSBt+xr/Sv4AbpN45IjVsLCpxOteLQKeCEnhs5s4pPh5OpjKsqLbDGWwMUSDGCJUnUmW3dJZsWakfJ5AyRJdMPISMDjlaAlE1GI1t0k3ueTuihYQlFlB+Sv/gYNfsn31037TvoLvnl0dhigousBbgN9JYGU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="bb0aef3f9c257907d9a2665a8863c32d67ab7619" Description="" Url=""><as:assemblyIdentity name="EQSM.application" version="1.0.0.1" publicKeyToken="519ee052a6877757" language="en-US" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=RCAIND01\Ryan</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>vXy5NcEAZqxfH0dPXmHqiC7M2jA=</DigestValue></Reference></SignedInfo><SignatureValue>1wPfVx7aWCTqem3mcg8qSWKDLAaMEuJeXyV6uflDqJj6Q8Dki9xzlEBFKDVTh/899pF/G7Ho4YFF9LgILYTpPRf7jd8oHofp1PUUXug+SvBTqiTRIGAYq5oTtAFLRg4hwLVzEo+oLdoaTTIKriCN1YF8USjjNOsAQKpFNKtT5eI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>6EsxHUW/JMgy47Q7GSBt+xr/Sv4AbpN45IjVsLCpxOteLQKeCEnhs5s4pPh5OpjKsqLbDGWwMUSDGCJUnUmW3dJZsWakfJ5AyRJdMPISMDjlaAlE1GI1t0k3ueTuihYQlFlB+Sv/gYNfsn31037TvoLvnl0dhigousBbgN9JYGU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQMko8QMNnIKxD559RldBs9TANBgkqhkiG9w0BAQUFADAlMSMwIQYDVQQDHhoAUgBDAEEASQBOAEQAMAAxAFwAUgB5AGEAbjAeFw0xNDEyMDMwMzA3MjVaFw0xNTEyMDMwOTA3MjVaMCUxIzAhBgNVBAMeGgBSAEMAQQBJAE4ARAAwADEAXABSAHkAYQBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDoSzEdRb8kyDLjtDsZIG37Gv9K/gBuk3jkiNWwsKnE614tAp4ISeGzmzik+Hk6mMqyotsMZbAxRIMYIlSdSZbd0lmxZqR8nkDJEl0w8hIwOOVoCUTUYjW3STe55O6KFhCUWUH5K/+Bg1+yffXTftO+gu+eXR2GKCi6wFuA30lgZQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAOOOt+obvJGXQXOkdob4wXfQ83Umwy0i4doq+iTk0Zmhy+vH7gc6/Qo22sFMEx3D3BuGeOfk52l1jUu9BPiwqldz8+/kMORv/J10xdgnb00RJw4U+8Qew63rYkPE9Hpb5RtZmXebEPp5JyMFf0hzmWoV24dhsq4iPlxXE48PpUQN</X509Certificate></X509Data></KeyInfo><Object><as:Timestamp>MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAaCA
+BIGA1wPfVx7aWCTqem3mcg8qSWKDLAaMEuJeXyV6uflDqJj6Q8Dki9xzlEBFKDVT
+h/899pF/G7Ho4YFF9LgILYTpPRf7jd8oHofp1PUUXug+SvBTqiTRIGAYq5oTtAFL
+Rg4hwLVzEo+oLdoaTTIKriCN1YF8USjjNOsAQKpFNKtT5eIAAAAAoIAwggSfMIID
+h6ADAgECAhIRIUBcHw7SWIgr5U2GhroR6kUwDQYJKoZIhvcNAQEFBQAwUjELMAkG
+A1UEBhMCQkUxGTAXBgNVBAoTEEdsb2JhbFNpZ24gbnYtc2ExKDAmBgNVBAMTH0ds
+b2JhbFNpZ24gVGltZXN0YW1waW5nIENBIC0gRzIwHhcNMTMwODIzMDAwMDAwWhcN
+MjQwOTIzMDAwMDAwWjBgMQswCQYDVQQGEwJTRzEfMB0GA1UEChMWR01PIEdsb2Jh
+bFNpZ24gUHRlIEx0ZDEwMC4GA1UEAxMnR2xvYmFsU2lnbiBUU0EgZm9yIE1TIEF1
+dGhlbnRpY29kZSAtIEcxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+sBeuotO2BDBWHlgPse1VpNZUy9j2czrsXV6rJf02pfqEw2FAxUa1WVI7QqIuXxNi
+EKlb5nPWkiWxfSPjBrOHOg5D8NcAiVOiETFSKG5dQHI88gl3p0mSl9RskKB2p/24
+3LOd8gdgLE9YmABr0xVU4Prd/4AsXximmP/Uq+yhRVmyLm9iXeDZGayLV5yoJivZ
+F6UQ0kcIGnAsM4t/aIAqtaFda92NAgIpA6p8N7u7KU49U5OzpvqP0liTFUy5LauA
+o6Ml+6/3CGSwekQPXBDXX2E3qk5r09JTJZ2Cc/os+XKwqRk5KlD6qdA8OsroW+/1
+X1H0+QrZlzXeaoXmIwRCrwIDAQABo4IBXzCCAVswDgYDVR0PAQH/BAQDAgeAMEwG
+A1UdIARFMEMwQQYJKwYBBAGgMgEeMDQwMgYIKwYBBQUHAgEWJmh0dHBzOi8vd3d3
+Lmdsb2JhbHNpZ24uY29tL3JlcG9zaXRvcnkvMAkGA1UdEwQCMAAwFgYDVR0lAQH/
+BAwwCgYIKwYBBQUHAwgwQgYDVR0fBDswOTA3oDWgM4YxaHR0cDovL2NybC5nbG9i
+YWxzaWduLmNvbS9ncy9nc3RpbWVzdGFtcGluZ2cyLmNybDBUBggrBgEFBQcBAQRI
+MEYwRAYIKwYBBQUHMAKGOGh0dHA6Ly9zZWN1cmUuZ2xvYmFsc2lnbi5jb20vY2Fj
+ZXJ0L2dzdGltZXN0YW1waW5nZzIuY3J0MB0GA1UdDgQWBBTUooRKOFoYf7pPMFC9
+ndV6h9YJ9zAfBgNVHSMEGDAWgBRG2D7/3OO+/4Pm9IWbsN1q1hSpwTANBgkqhkiG
+9w0BAQUFAAOCAQEAAjEULlhXZEGF6K8SdTyIHMNe7CzpoTz1uqpTHbnRKWPcQ2eG
+1Dna3sbJ/75FhfSk18FR6hjuQFhe5nvMokEpEzjI6iEWnM6Qpi77psrZlN9AHfkC
+GCu+9l1Pn/+aSNvFBQnKgM6g+dxLwyPmA4+0tK9bcSlhkRgaa3ry/Q3RzX1emOu6
+cF7l9OpD3jU9xRSBits+EF67cvqhoJOrAxzBZTyRE4sEXSvEuRYbzFXFDOir50PJ
+soMopVMTR6s5ZLkc6jQwsXYAlSHx1D2o/aAAMtdumDymnDsLg77LuLsqJoxZuLmu
+ryas4jSi3CENgQs4E/dFo+PbxKyhbRu35WFc1zCCBBQwggL8oAMCAQICCwQAAAAA
+AS9O4VLXMA0GCSqGSIb3DQEBBQUAMFcxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBH
+bG9iYWxTaWduIG52LXNhMRAwDgYDVQQLEwdSb290IENBMRswGQYDVQQDExJHbG9i
+YWxTaWduIFJvb3QgQ0EwHhcNMTEwNDEzMTAwMDAwWhcNMjgwMTI4MTIwMDAwWjBS
+MQswCQYDVQQGEwJCRTEZMBcGA1UEChMQR2xvYmFsU2lnbiBudi1zYTEoMCYGA1UE
+AxMfR2xvYmFsU2lnbiBUaW1lc3RhbXBpbmcgQ0EgLSBHMjCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAJTvZfi1V5+gUw00BusJH7dHGGrL8Fvk/yelNNH3
+iRq/nrHNEkFuZtSBoIWLZFpGL5mgjXex4rxc3SLXamfQu+jKdN6LTw2wUuWQW+tH
+DvHnn5wLkGU+F5YwRXJtOaEXNsq5oIwbTwgZ9oExrWEWpGLmtECew/z7lfb7tS6V
+gZjg78Xr2AJZeHf3quNSa1CRKcX8982TZdJgYSLyBvsy3RZR+g79ijDwFwmnu/ME
+rquQ52zfeqn078RiJ19vmW04dKoRi9rfxxRM6YWy7MJ9SiaP51a6puDPklOAdPQD
+7GiyYLyEIACDG6HutHQFwSmOYtBHsfrwU8wY+S47+XB+tCUCAwEAAaOB5TCB4jAO
+BgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQURtg+
+/9zjvv+D5vSFm7DdatYUqcEwRwYDVR0gBEAwPjA8BgRVHSAAMDQwMgYIKwYBBQUH
+AgEWJmh0dHBzOi8vd3d3Lmdsb2JhbHNpZ24uY29tL3JlcG9zaXRvcnkvMDMGA1Ud
+HwQsMCowKKAmoCSGImh0dHA6Ly9jcmwuZ2xvYmFsc2lnbi5uZXQvcm9vdC5jcmww
+HwYDVR0jBBgwFoAUYHtmGkUNl8qJUC99BM00qP/8/UswDQYJKoZIhvcNAQEFBQAD
+ggEBAE5eVpAeRrTZSTHzuxc5KBvCFt39QdwJBQSbb7KimtaZLkCZAFW16j+lIHbT
+hjTUF8xVOseC7u+ourzYBp8VUN/NFntSOgLXGRr9r/B4XOBLxRjfOiQe2qy4qVgE
+Agcw27ASXv4xvvAESPTwcPg6XlaDzz37Dbz0xe2XnbnU26UnhOM4m4unNYZEIKQ7
+baRqC6GD/Sjr2u8o9syIXfsKOwCr4CHr4i81bA+ONEWX66L3mTM1fsuairtFTec/
+n8LZivplsm7HfmX/6JLhLDGi97AnNkiPJm877k12H3nD5X+WNbwtDswBsI5//1GA
+gKeS1LNERmSMh08WYwcxS2Ow3/MAADGCAo8wggKLAgEBMGgwUjELMAkGA1UEBhMC
+QkUxGTAXBgNVBAoTEEdsb2JhbFNpZ24gbnYtc2ExKDAmBgNVBAMTH0dsb2JhbFNp
+Z24gVGltZXN0YW1waW5nIENBIC0gRzICEhEhQFwfDtJYiCvlTYaGuhHqRTAJBgUr
+DgMCGgUAoIH9MBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkF
+MQ8XDTE0MTIwMzAzMjI0N1owIwYJKoZIhvcNAQkEMRYEFD3ut0TEHglvOLewT0HG
+wXJtliEYMIGdBgsqhkiG9w0BCRACDDGBjTCBijCBhzCBhAQUjOafUBLh0aj7OV4u
+MeK0K947NDswbDBWpFQwUjELMAkGA1UEBhMCQkUxGTAXBgNVBAoTEEdsb2JhbFNp
+Z24gbnYtc2ExKDAmBgNVBAMTH0dsb2JhbFNpZ24gVGltZXN0YW1waW5nIENBIC0g
+RzICEhEhQFwfDtJYiCvlTYaGuhHqRTANBgkqhkiG9w0BAQEFAASCAQCjPmxN2c/q
+vOrIN/PI5eLAjxfFOPv347Ld8nU4m8rNRcj/tEgz0CNWApbDImSd8iEyAH/Almyk
+Zb4jLJQnEiypSqcJQ8hB9mZCyOQuaQd34YwerHiDMOBp6xpv+FjhbfiVfSjnwhgP
+xvnzCOwJw44gAiCyTrlC5xRLDXBwrWkgzwkudDL6ZCqWzKk7sUO7+VHeJAdUct/x
+5vKYjL4Xr5AMsHmI30joCBB7+EaQ5ONhoErmmmPKnGxIFUgY6maayrnFCf8GpW9O
+rnl4kYDhzsvhm6ETJh4tWOquFulCuMCskbTuNxq0DNoO+IRSBCmoy5xtMoWvtbsm
+oAghy7Hkzft0AAAAAAAA</as:Timestamp></Object></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -9,9 +9,6 @@
 //------------------------------------------------------------------------------
 
 namespace EQSM.Properties {
-    using System;
-    
-    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -57,6 +54,16 @@ namespace EQSM.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hotbutton {
+            get {
+                object obj = ResourceManager.GetObject("hotbutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

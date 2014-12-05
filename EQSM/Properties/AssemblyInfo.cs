@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EQSM")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("EverQuest Settings Manager")]
+[assembly: AssemblyDescription("Utility for managing EverQuest settings")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EQSM")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCompany("Yourfirefly.com")]
+[assembly: AssemblyProduct("EverQuest Settings Manager")]
+[assembly: AssemblyCopyright("Copyright © Yourfirefly.com 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

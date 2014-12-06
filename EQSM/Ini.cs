@@ -7,7 +7,7 @@ namespace Yourfirefly.EQSM.INI
     /// <summary>
     /// Create a New INI file to store or load data
     /// </summary>
-    public class INIFile
+    public class IniFile
     {
         public string path;
 
@@ -20,10 +20,10 @@ namespace Yourfirefly.EQSM.INI
             int size, string filePath);
 
         /// <summary>
-        /// INIFile Constructor.
+        /// IniFile Constructor.
         /// </summary>
         /// <PARAM name="INIPath"></PARAM>
-        public INIFile(string INIPath)
+        public IniFile(string INIPath)
         {
             path = INIPath;
         }

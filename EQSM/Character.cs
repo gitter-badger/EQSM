@@ -1,4 +1,6 @@
 ﻿using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using Yourfirefly.EQSM.INI;
 
 namespace Yourfirefly.EQSM
 {
@@ -6,6 +8,7 @@ namespace Yourfirefly.EQSM
     {
         public string File { get; set; }
         public string Name { get; set; }
+        public string Server { get; set; }
         public CharacterFriends Friends = new CharacterFriends();
         public CharacterIgnored Ignored = new CharacterIgnored();
         public CharacterAbilities Abilities = new CharacterAbilities();
@@ -14,9 +17,15 @@ namespace Yourfirefly.EQSM
         public SocialPage[] Socials = new SocialPage[10];
         public string InspectText { get; set; }
 
-        public Character(string _file)
+        public Character(string _directory, string _file)
         {
-            File = _file;
+            this.File = _file;
+
+            Match _fileMatch = Regex.Match(this.File, @"^(?<name>[A-Z].*)_(?<server>\w+)\.ini$");
+            this.Name = _fileMatch.Groups["name"].Value;
+            this.Server = _fileMatch.Groups["server"].Value;
+
+            IniFile _iniFile = new IniFile(_directory + "\\" + this.File);
         }
     }
 

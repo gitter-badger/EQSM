@@ -16,6 +16,7 @@ namespace Yourfirefly.EQSM
             @"Users\Public\Sony Online Entertainment\EverQuest",
             @"%PROGRAMFILES(x86)%\Sony\EverQuest",
             @"%PROGRAMFILES%\Sony\EverQuest",
+            @"Users\Ryan\Downloads\EverQuest",
         };
         
         public SettingsLoader()
@@ -56,7 +57,7 @@ namespace Yourfirefly.EQSM
             {
                 if (file.Name.Substring(0, 2) != "UI")
                 {
-                    Character _character = new Character(file.FullName);
+                    Character _character = new Character(file.DirectoryName, file.Name);
                     _characters.Add(_character);
                 }
             }

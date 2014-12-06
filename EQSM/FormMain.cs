@@ -6,8 +6,8 @@ namespace Yourfirefly.EQSM
 {
     public partial class FormMain : Form
     {
+        public static SettingsLoader settings;
         private FormAbout _formAbout;
-        private SettingsLoader settings;
 
         public string TextEQLocation
         {

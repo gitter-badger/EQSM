@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace EQSM
+namespace Yourfirefly.EQSM
 {
     class Character
     {
@@ -14,9 +14,9 @@ namespace EQSM
         public SocialPage[] Socials = new SocialPage[10];
         public string InspectText { get; set; }
 
-        public Character(string file)
+        public Character(string _file)
         {
-            File = file;
+            File = _file;
         }
     }
 

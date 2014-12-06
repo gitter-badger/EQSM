@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace EQSM
+namespace Yourfirefly.EQSM
 {
     static class Program
     {

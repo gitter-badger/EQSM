@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace EQSM
+namespace Yourfirefly.EQSM
 {
     partial class FormAbout : Form
     {

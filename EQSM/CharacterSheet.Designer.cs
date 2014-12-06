@@ -1,4 +1,4 @@
-﻿namespace EQSM
+﻿namespace Yourfirefly.EQSM
 {
     partial class CharacterSheet
     {

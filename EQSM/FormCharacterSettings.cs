@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace EQSM
+namespace Yourfirefly.EQSM
 {
     public partial class FormCharacterSettings : Form
     {

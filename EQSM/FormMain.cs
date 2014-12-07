@@ -6,7 +6,7 @@ namespace Yourfirefly.EQSM
 {
     public partial class FormMain : Form
     {
-        public static SettingsLoader settings;
+        public static SettingsLoader Settings;
         private FormAbout _formAbout;
 
         public string TextEQLocation
@@ -19,8 +19,7 @@ namespace Yourfirefly.EQSM
         {
             InitializeComponent();
 
-            settings = new SettingsLoader();
-            settings.Parent = this;
+            Settings = new SettingsLoader { Parent = this };
         }
 
         private void buttonAbout_Click(object sender, EventArgs e)
@@ -34,9 +33,9 @@ namespace Yourfirefly.EQSM
             DriveInfo[] drives = DriveInfo.GetDrives();
 
             foreach (DriveInfo d in drives)
-                foreach (string l in settings.EQLocations)
+                foreach (string l in Settings.EQLocations)
                     if (Directory.Exists(d + l))
-                        settings.EQLocation = d + l;
+                        Settings.EQLocation = d + l;
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
@@ -45,7 +44,7 @@ namespace Yourfirefly.EQSM
 
             DialogResult result = browser.ShowDialog();
             if (result == DialogResult.OK)
-                settings.EQLocation = browser.SelectedPath;
+                Settings.EQLocation = browser.SelectedPath;
         }
     }
 }

@@ -1,28 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Windows.Forms;
 
 namespace Yourfirefly.EQSM
 {
     public class SettingsLoader
     {
         private string _eqLocation;
-        private List<Character> _characters;
+        private readonly List<Character> _characters;
         private FormMain _mainForm;
         private readonly string[] _eqLocations =
         {
+            /*
             @"Users\Public\Public Games\EverQuest",
             @"Users\Public\Sony Online Entertainment\EverQuest",
             @"%PROGRAMFILES(x86)%\Sony\EverQuest",
             @"%PROGRAMFILES%\Sony\EverQuest",
-            @"Users\Ryan\Downloads\EverQuest",
+            @"Users\Ryan\Downloads\EverQuest"
+            */
+            @"Users\Ryan\Desktop"
         };
         
-        public SettingsLoader()
-        {
-            _characters = new List<Character>();
-        }
+        public SettingsLoader() { _characters = new List<Character>(); }
         
         public FormMain Parent
         {
@@ -57,8 +55,8 @@ namespace Yourfirefly.EQSM
             {
                 if (file.Name.Substring(0, 2) != "UI")
                 {
-                    Character _character = new Character(file.DirectoryName, file.Name);
-                    _characters.Add(_character);
+                    Character character = new Character(file.DirectoryName, file.Name);
+                    _characters.Add(character);
                 }
             }
         }

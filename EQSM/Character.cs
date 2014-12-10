@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Text.RegularExpressions;
 
 namespace Yourfirefly.EQSM
@@ -12,13 +14,13 @@ namespace Yourfirefly.EQSM
         public string File { get; set; }
         public string Name { get; set; }
         public string Server { get; set; }
-
         public Friends Friends;
         public Ignored Ignored;
         public Abilities Abilities;
         public CombatSkills CombatSkills;
         public CombatAbilities CombatAbilities;
         public Socials Socials;
+        public HotButtons HotButtons;
         public string InspectText { get; set; }
 
         /// <summary>
@@ -42,6 +44,7 @@ namespace Yourfirefly.EQSM
             CombatSkills = new CombatSkills(iniFile);
             CombatAbilities = new CombatAbilities(iniFile);
             Socials = new Socials(iniFile);
+            HotButtons = new HotButtons(iniFile);
             InspectText = iniFile.IniReadValue("InspectText", "Text");
         }
     }
@@ -234,7 +237,7 @@ namespace Yourfirefly.EQSM
     /// </summary>
     public class Socials
     {
-        private readonly SocialPage[] _socialPages = new SocialPage[10];
+        public SocialPage[] SocialPages = new SocialPage[10];
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Socials"/> class.
@@ -244,7 +247,7 @@ namespace Yourfirefly.EQSM
         {
             for (int i = 0; i < 10; i++)
             {
-                _socialPages[i] = new SocialPage(iniFile, i + 1);
+                SocialPages[i] = new SocialPage(iniFile, i + 1);
             }
         }
     }
@@ -254,12 +257,11 @@ namespace Yourfirefly.EQSM
     /// </summary>
     public class SocialPage
     {
-        private readonly SocialButton[] _buttons = new SocialButton[10];
+        private readonly SocialButton[] _buttons = new SocialButton[12];
 
-        public SocialButton this[int i]
+        public SocialButton Buttons(int i)
         {
-            get { return _buttons[i]; }
-            set { _buttons[i] = value; }
+            return _buttons[i];
         }
 
         /// <summary>
@@ -269,7 +271,7 @@ namespace Yourfirefly.EQSM
         /// <param name="page">The social page index.</param>
         public SocialPage(IniFile iniFile, int page)
         {
-            for (int b = 0; b < 10; b++)
+            for (int b = 0; b < _buttons.Length; b++)
             {
                 int buttonColor;
                 int.TryParse(iniFile.IniReadValue("Socials", "Page" + (page + 1) + "Button" + (b + 1) + "Color"), out buttonColor);
@@ -285,6 +287,8 @@ namespace Yourfirefly.EQSM
                 {
                     button.Lines[l] = iniFile.IniReadValue("Socials", "Page" + (page + 1) + "Button" + (b + 1) + "Line" + (l + 1));
                 }
+
+                _buttons[b] = button;
             }
         }
     }
@@ -344,5 +348,128 @@ namespace Yourfirefly.EQSM
             get { return _lines[i]; }
             set { _lines[i] = value; }
         }
+    }
+
+    /// <summary>
+    /// Contains a <see cref="SocialPage"/> array of the character's social pages.
+    /// </summary>
+    public class HotButtons
+    {
+        /*
+        B0=Melee Attack
+        B1=Range Attack
+
+        F1=Left Ear
+        F2=Head
+        F3=Face
+        F4=Right Ear
+        F5=Neck
+        F6=Shoulders
+        F7=Arms
+        F8=Back
+        F9=Left Wrist
+        F10=Right Wrist
+        F11=Range
+        F12=Hands
+        F13=Primary
+        F14=Secondary
+        F15=Left Finger
+        F16=Right Finger
+        F17=Chest
+        F18=Legs
+        F19=Feet
+        F20=Waist
+        F21=Ammo
+        F22-28=Inventory Slots, Top to Bottom
+
+        Built-in Macros
+        G0=Who
+        G1=Invite
+        G2=Disband
+        G3=Camp (Exit)
+        G4=Sit/Stand
+        G5=Walk/Run
+        G10=Spells
+
+        H0-H7=Spell Slots
+
+        J = Abilities (See http://wiki.eqemulator.org/p?Skills&frm=Main)
+
+        I1=Pet Attack
+        I2=Pet Guard
+        I3=Pet Go Away
+        I4=Pet Sit
+        I5=Pet Back
+        I6=Pet Follow
+        I7=Pet Taunt
+        */
+
+        public HotButtonPage[] HotButtonPages = new HotButtonPage[40];
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Socials"/> class.
+        /// </summary>
+        /// <param name="iniFile">The IniFile instance to load settings from.</param>
+        public HotButtons(IniFile iniFile)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                HotButtonPages[i] = new HotButtonPage(iniFile, i + 1);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Contains a <see cref="HotButton"/> array of the character's hot buttons for a specified page.
+    /// </summary>
+    public class HotButtonPage
+    {
+        private readonly HotButton[] _buttons = new HotButton[10];
+
+        public HotButton Buttons(int i)
+        {
+            return _buttons[i];
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SocialPage"/> class.
+        /// </summary>
+        /// <param name="iniFile">The IniFile instance to load settings from.</param>
+        /// <param name="page">The social page index.</param>
+        public HotButtonPage(IniFile iniFile, int page)
+        {
+            for (int b = 0; b < _buttons.Length; b++)
+            {
+                HotButton button = new HotButton
+                {
+                    Page = page,
+                    Value = iniFile.IniReadValue(page <= 10 ? "HotButtons" : "HotButtons2", "Page" + page + "Button" + (b + 1))
+                };
+
+                _buttons[b] = button;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Contains the details for hot button.
+    /// </summary>
+    public class HotButton
+    {
+        /// <summary>
+        /// Gets or sets the <see cref="HotButtonPage"/> which the button is a part of.
+        /// </summary>
+        /// <value>
+        /// The page index.
+        /// </value>
+        public int Page { get; set; }
+
+        /// <summary>
+        /// Gets or sets the hotkey value.
+        /// </summary>
+        /// <value>
+        /// The EverQuest hotkey value (E12 + (page * 10))
+        /// </value>
+        public string Value { get; set; }
     }
 }

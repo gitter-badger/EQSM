@@ -190,6 +190,21 @@
   <ItemGroup>
     <None Include="images\hotbutton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\hotbutton_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\arrow_left.down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\arrow_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\arrow_right_down.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

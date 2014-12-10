@@ -1,1 +1,0 @@
-"C:\Program Files (x86)\PuTTY\pscp.exe" -r -P 3202 -i "C:/Users/Ryan/.ssh/eqsm.ppk" "C:/Users/Ryan/Documents/Visual Studio 2013/Projects/EQSM/publish/*" eqsm@merlin.yourfirefly.com:/data/eqsm

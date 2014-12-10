@@ -29,4 +29,5 @@ _ReSharper*/
 *.vssscc
 $tf*/
 publish/
+publish.bat
 help/
